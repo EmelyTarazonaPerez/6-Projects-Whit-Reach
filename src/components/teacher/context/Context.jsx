@@ -1,4 +1,7 @@
 import { Children, React, createContext, useContext, useState } from "react";
+import  marta  from '../assets/marta.png'
+import  grace  from '../assets/grace.png'
+import  teacher1  from '../assets/teacher1.jpg'
 
 export const Context = createContext()
 
@@ -6,9 +9,9 @@ export function Datos ({children}) {
 
     const valores = [{
         titulo: "Aprenda React intensivamente con una profesora nativa",
-        texto: "2 semanas. Una profesora sólo para ti (12h/día)",
+        texto: "Una profesora sólo para ti (12h/día). 2 semanas.",
         boton1: "Profesora",
-        foto: "marta.PNG",
+        foto: marta,
         nombre: "Marta Ríos",
         boton2: "Lugar",
         direccion: "48 St Laurent Boulevard, Montreal, Canadá"
@@ -17,7 +20,7 @@ export function Datos ({children}) {
         texto: "2 weeks. A teacher just for you (12h/day)",
         boton1: "Professor",
         nombre: "Grace Trembley",
-        foto: "grace.PNG",
+        foto: grace,
         boton2: "Lotacion",
         direccion: "65 Stonehaven, Ottawa, Canadá"
     }, {
@@ -25,7 +28,7 @@ export function Datos ({children}) {
         texto: "2 semaines. Un professeur rien que pour vous (12h/jour)",
         boton1: "Professeur",
         nombre: "Aimée Mathieu",
-        foto: "aimee.PNG",
+        foto: teacher1,
         boton2: "Emplacement",
         direccion: "2700 Rue Jean-Perrin #190, Québec, Canadá"
     }, {

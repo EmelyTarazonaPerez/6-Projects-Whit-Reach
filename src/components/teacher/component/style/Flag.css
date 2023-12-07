@@ -1,5 +1,5 @@
-.box-flag{
- display: flex;
+.box-flag {
+    display: flex;
 }
 
 .lenguage {
@@ -9,32 +9,114 @@
     border-radius: 15px;
 }
 
-button {
+.button1 {
+    font-size: 15px;
     margin: 5px;
     color: white;
     padding: 10px;
-    background-color: #835AA1 ;
+    background-color: #835AA1;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color:#29294A;
+.button1:hover {
+    background-color: #ffffff;
+    color: #835AA1;
+    font-weight: 600;
+    border: 2px solid #835AA1;
 }
 
-.box-button{
+.button2 {
+    font-size: 15px;
+    margin: 5px;
+    color: #835AA1;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #835AA1;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.button2:hover {
+    background-color: #835AA1;
+    color: white;
+    font-size: 15px;
+}
+
+.box-button {
     margin: 20px;
 }
 
-.display{
+.display {
     display: flex;
     justify-content: center;
 }
-.container-content{
+
+.container-content {
     max-width: 300px;
-    border-radius: 10px;
-    padding: 30px;
+    padding: 0px !important;
+    border: 2px solid #379B9C;
+    position: absolute;
+    border-radius: 99px 0px 98px 0px;
+    -moz-border-radius: 99px 0px 98px 0px;
+    -webkit-border-radius: 99px 0px 98px 0px;
+    border: 2px solid #379B9C;
+}
+
+.tittle {
+    font-weight: 800;
+    padding: 15px;
+    font-size: 20px;
+    color: #ffffff;
+   
+}
+
+.container-tittle {
     background-color: #379B9C;
-    color: white;
+    border-radius: 99px 0px 0px 0px;
+    -moz-border-radius: 99px 0px 0px 0px;
+    -webkit-border-radius: 99px 0px 0px 0px;
+    border: 11px solid #379B9C;
+    position: relative;
+    top: -6px;
+    left: 0px;
+}
+
+.text {
+    color: #29294A;
+    font-size: 15px;
+
+}
+
+.container-photo {
+    display: flex;
+    justify-content: center;
+}
+.photo {
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    background-color: #009688;
+}
+
+img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.container-info {
+    margin: 30px;
+}
+
+.caption {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.name {
+    color: #009688;
+    font-weight: bold;
 }
