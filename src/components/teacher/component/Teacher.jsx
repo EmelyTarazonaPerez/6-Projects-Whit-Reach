@@ -1,16 +1,20 @@
 import React, { useContext } from 'react'
 import { Context } from '../context/Context'
+import './style/Flag.css'
 
 function Teacher() {
-
-    const image = "./grace.png"
+    const { info } = useContext(Context)
+    const alumno = info[3].idioma
+    console.log(info[alumno].foto)
     return (
         <>
-            <h1>Profesora:</h1>
-            <div className='photo'>
-                <img src={image} alt='...' />
+            <div className='container-photo'>
+                <div className='photo'>
+                    <img src={info[alumno].foto} alt='...' />
+                </div>
             </div>
-            <div className='name'>Martha</div>
+            <h1 className='caption'>Profesora:</h1>
+            <div className='name'>{info[alumno].nombre}</div>
         </>
     )
 }

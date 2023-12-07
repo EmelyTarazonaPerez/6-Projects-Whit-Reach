@@ -22,26 +22,28 @@ function Content() {
     return (
         <div className='display'>
             <div className='container-content'>
-                <img src="./grace.png" alt='../' />
-
-                <div>{info[idioma].titulo}</div>
-                <p>{info[idioma].texto}</p>
-                <div className='box-button'>
-                    <button onClick={hide1} >{info[idioma].boton1}</button>
-                    <button onClick={hide2}>{info[idioma].boton2}</button>
+                <div className='container-tittle'>
+                    <h1 className='tittle'>{info[idioma].titulo}</h1>
                 </div>
-                {showTeacher
+                <div className='container-info'>
+                    <p className='text'>{info[idioma].texto}</p>
+                    <div className='box-button'>
+                        <button className='button1' onClick={hide1} >{info[idioma].boton1}</button>
+                        <button className='button2' onClick={hide2}>{info[idioma].boton2}</button>
+                    </div>
+                    {showTeacher
 
-                    ? <>
-                        <img src='./grace.png' alt='../' />
-                        <Teacher></Teacher>
-                    </>
-                    : null
-                }
-                {showLocation
-                    ? <Location></Location>
-                    : null
-                }
+                        ? <>
+                            <Teacher></Teacher>
+                        </>
+                        : null
+                    }
+                    {showLocation
+                        ? <Location></Location>
+                        : null
+                    }
+                </div>
+
 
             </div>
         </div>
