@@ -13,3 +13,6 @@ Resumen
 2. Convertidor de moneda
    
 ![image](https://github.com/EmelyTarazonaPerez/mini-project-react/assets/122141594/9e5a89af-4c58-4f5f-8602-e65f05097e28)
+
+3. convertidor de texto
+![image](https://github.com/EmelyTarazonaPerez/mini-project-react/assets/122141594/05e9bfeb-3353-4228-ad99-10edfbf73d3a)
