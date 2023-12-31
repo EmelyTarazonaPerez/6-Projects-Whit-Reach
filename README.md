@@ -2,7 +2,7 @@
 
 En esta app se usan diversos projectos, para hacer uso de estos solo inserte el componente principal de cada projecto al App.js
 
-## Ejemplos de projectos 
+## Ejemplos de projectos .
 1. Cena con los reyes
 ![image](https://github.com/EmelyTarazonaPerez/mini-project-react/assets/122141594/4211599c-852d-4f4b-b8f7-200b87fde407)
 
