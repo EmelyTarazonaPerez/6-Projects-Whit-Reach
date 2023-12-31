@@ -1,0 +1,54 @@
+.App {
+    height: 100vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.name_king{
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 25px;
+}
+
+.bg {
+    margin-top: 20px;
+    width: max-content;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.123);
+}
+
+.row {              
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    padding: 17px;
+}
+
+.wrapper {
+    width: max-content;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+    
+.img_king {
+    width: 200px;
+    height: 200px;
+}
+
+.containter {
+    margin-top: 25px;
+}
+
+.link_king {
+    text-decoration: none;
+}
