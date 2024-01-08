@@ -9,12 +9,12 @@ En esta app se usan diversos projectos, para hacer uso de estos solo inserte el 
 | 1  | Cena con los Reyes | http://localhost:4000/products/filter |
 | 2  | Convertidor de moneda | http://localhost:4000/classifications |
 
-| #             | description            | url preview project |
-| ------------- | ---------------------- | ------------------- |
-| 1             | Cena con los Reyes     | 
-| 2             | Convertidos de moneda  |
-| 3             | Cena con los Reyes     | 
-| 4             | Convertidos de moneda  |
+| #             | name                   | 
+| ------------- | ---------------------- | 
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/1             | app jocker              | 
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/4             | Project routing king    |
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/3             | project select teachers | 
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/5             | project admin articule  |
 | 5             | Convertidos de moneda  |
 | 6             | Convertidos de moneda  |
 
