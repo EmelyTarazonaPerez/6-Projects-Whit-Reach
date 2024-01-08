@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.css';
-import Index from './components/routing/index.jsx';
+import Index from '../src/components/appAdmin/index';
 
 function App() {
 

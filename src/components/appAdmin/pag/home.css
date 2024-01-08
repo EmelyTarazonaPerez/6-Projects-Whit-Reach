@@ -1,0 +1,33 @@
+.home{
+    height: 100vh;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #73CE2C;
+    width: 20%;
+    height: 100%;
+}
+
+.adminProduct {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.home_container{
+    display: flex;
+    height: 100%;
+}

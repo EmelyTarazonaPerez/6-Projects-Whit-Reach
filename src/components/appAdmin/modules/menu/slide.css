@@ -1,0 +1,20 @@
+.button_slide {
+    font-size: 32px;
+    padding: 15px;
+    font-weight: 700;
+    background: none;
+    border: none;
+}
+
+.button_slide:hover {
+    background-color: rgb(43, 92, 226);
+}
+
+.container_options{
+    display: flex;
+    flex-direction: column;
+}
+
+.active {
+    color: white;
+}
