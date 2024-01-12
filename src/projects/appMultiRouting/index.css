@@ -1,0 +1,11 @@
+.app {
+    color: white;
+    height: 100vh;
+    background-color: #0E0B16;
+}
+
+.asbtract_bg{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
