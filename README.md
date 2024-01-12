@@ -4,9 +4,9 @@ En esta app se usan diversos projectos, para hacer uso de estos solo inserte el 
 
 ## Projects
 
-| #   link      | name                   | 
+| #   link      | name                   | description |
 | ------------- | ---------------------- | 
-| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/1             | app jocker              | 
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/1             | app jocker              |  Mini project where an open API provides random wildcards. |
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/4             | Project routing king    |
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/3             | project select teachers | 
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/5             | project admin articule  |
