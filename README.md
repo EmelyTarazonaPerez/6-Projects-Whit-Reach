@@ -12,7 +12,7 @@ En esta app se usan diversos projectos, para hacer uso de estos solo inserte el 
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/5             | project admin articule  |
 | 5             | Dinner with the kings |
 | 6             | Currency converter  |
-| 6             | app multi-routing  |
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/6        | app multi-routing  |
 
 ## Ejemplos de projectos .
 1. Dinner with the kings
