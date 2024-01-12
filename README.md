@@ -12,7 +12,7 @@ En esta app se usan diversos projectos, para hacer uso de estos solo inserte el 
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/5 | project admin articule  | In this project, the useReducer state manager was used to manage the actions and changes that the variable must take for each user interaction. More info here  https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/5 |
 | 5             | Dinner with the kings |
 | 6             | Currency converter  |
-| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/6        | app multi-routing  |
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/6        | app multi-routing  | In this project, I create a page with private routing and public routing. To do this, I use the context to alert when a user logs in, then I create two components (private routing and public routing) which check the user's status, to give permission to certain content. More info here  https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/6    
 
 ## Ejemplos de projectos .
 1. Dinner with the kings
