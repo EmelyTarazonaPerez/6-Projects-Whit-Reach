@@ -1,5 +1,5 @@
 import React from 'react'
-import Flag from './Flag'
+import Flag from './Flag.jsx'
 import Content from './Content.jsx'
 
 function Page() {
