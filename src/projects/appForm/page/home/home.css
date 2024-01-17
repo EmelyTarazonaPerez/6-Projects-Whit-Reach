@@ -1,0 +1,118 @@
+.img_figure {
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.img_figure:hover {
+    transform: scale(1.09);
+}
+
+.img_figure {
+    background-color: blue;
+}
+
+.select_zones {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.box_img {
+    width: 292px;
+    height: 165px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container_info {
+    /*center text*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    /*style font*/
+    font-family: 'Poppins';
+    background-color: rgba(56, 120, 216, 0.87);
+    color: white;
+    font-size: 14px;
+    /*style position*/
+    position: absolute;
+    top: -223px;
+    left: 0;
+    height: 90%;
+    font-weight: 100;
+}
+
+.box_img:hover .container_info {
+    top: 0;
+    cursor: pointer;
+}
+
+.card_vacation {
+    margin: 27px;
+}
+
+label {
+    color: #000;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input {
+    margin: 0px 10px;
+}
+
+.box_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+}
+
+.container p {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-style: normal;
+}
+
+.container_info p {
+    font-size: 12px;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 28px;
+    padding: 10px;
+    border: none;
+    width: 158px;
+    border-radius: 15px;
+    background: rgba(56, 120, 216, 0.87);
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: white;
+}
+
+button b {
+    margin-right: 20px;
+}
+
+.container section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+section h1 {
+    margin: 0px 15px;
+    font-family: 'Poppins';
+    font-size: 40px;
+}
