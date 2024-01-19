@@ -13,7 +13,7 @@ const Home = () => {
 
     const [bottonDisabled, setBottonDisabled] = useState(true);
 
-    const { stage, setStage, setInformation, summary } = useContext(Context)
+    const { stage, setStage, dispatch } = useContext(Context)
 
     const { register,
         handleSubmit,
@@ -24,12 +24,18 @@ const Home = () => {
     const navigate = useNavigate();
 
     const get = (zone) => {
+        setBottonDisabled(false)
         const zoneCheck = zones.find(item => item.location === zone.valor)
-        setInformation(zoneCheck)
-        console.table(summary)
+        dispatch({ type: 'section_zone', payload: zoneCheck })
         setStage(stage + 1)
         navigate('/form')
+
     }
+
+    const handleChange = (e) => {
+       if (e.target.value) setBottonDisabled(false)
+    }
+
     return (
         <div className='container'>
             <section>
@@ -40,7 +46,7 @@ const Home = () => {
                 <section className='select_zones'>
                     {
                         zones.map(item =>
-                            <article className='card_vacation'>
+                            <article className='card_vacation' key={item.location}>
                                 <div className='box_img'>
                                     <img className='img_figure' src={item.src} alt='machu' />
                                     <div className='container_info'>
@@ -49,15 +55,16 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className='box_input'>
-                                    <input type="radio" id='montain' name='vacation' value={item.location} {...register('valor')} />
-                                    <label for={item.location}>{item.location} ({item.price})</label>
+                                    <input type="radio" id='montain' name='vacation' onClick={handleChange} value={item.location} {...register('valor', { required: true })} />
+                                    <label htmlFor={item.location}>{item.location} ({item.price})</label>
+                                    {errors.valor ? 'select one zone' : ''}
                                 </div>
                             </article>
                         )
                     }
                 </section>
                 <p>{questions[stage].text}</p>
-                <button type='submit'>
+                <button type='submit' disabled={bottonDisabled === true} style={bottonDisabled !== true ? { backgroundColor: '#2146C8' } : { backgroundColor: '#3878D8' }}>
                     <b>continue</b>
                     <FontAwesomeIcon icon={faArrowRight} />
                 </button>

@@ -1,23 +1,51 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import Context from './context';
 
-const summary = []
+const valueInitial = {
+    src:'',
+    location:'',
+    price:'',
+    name:'',
+    lastname:'',
+    gmail:'',
+    bedrooms:'',
+    people: '',
+    day:'',
+}
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'section_zone':
+            state.src = action.payload.src
+            state.location = action.payload.location
+            state.price = action.payload.price
+            break;
+    
+        case 'information_client':
+            state.name = action.payload.name
+            state.lastname = action.payload.Lastname
+            state.gmail = action.payload.Gmail
+            if (action.payload.Bedrooms) state.bedrooms = action.payload.Bedrooms
+            if (action.payload.people) state.people = action.payload.people
+            if (action.payload.days) state.day = action.payload.days            
+            break;
+        default:
+            break;
+    }
+    return state
+}
+
 
 const Provide = ({ children }) => {
     const [stage, setStage] = useState(0);
-
-    const setInformation = (zone) => {
-        summary.push(zone.src)
-        summary.push(zone.location)
-        summary.push(zone.price)
-    }
+    const [summary, dispatch] = useReducer(reducer, valueInitial);
 
     return (
         <Context.Provider value={{
             stage,
             setStage,
             summary,
-            setInformation
+            dispatch
         }}>
             {children}
         </Context.Provider>

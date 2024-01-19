@@ -8,21 +8,21 @@
             {
                 "question": "name",
                 "sufijo": "username",
-                "requied": true,
+                "required": true,
                 "min": null,
                 "max": null
             },
             {
-                "question": "Last name",
+                "question": "Lastname",
                 "sufijo": "",
-                "requied": true,
+                "required": true,
                 "min": null,
                 "max": null
             },
             {
                 "question": "Gmail",
                 "sufijo": "",
-                "requied": true,
+                "required": true,
                 "min": null,
                 "max": null
             }
@@ -34,24 +34,27 @@
             {
                 "question": "Bedrooms",
                 "sufijo": "",
-                "requied": true,
+                "required": true,
                 "min": 1,
                 "max": 10
             },
             {
-                "question": "Nº of people",
+                "question": "people",
                 "sufijo": "",
-                "requied": true,
+                "required": true,
                 "min": 1,
                 "max": 7
             },
             {
-                "question": "Nº of days",
+                "question": "days",
                 "sufijo": "",
                 "requied": true,
                 "min": 2,
                 "max": 7
             }
         ]
+    },
+    {
+        "text": "End the form"
     }
 ]
