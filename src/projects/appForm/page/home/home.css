@@ -45,13 +45,14 @@
     position: absolute;
     top: -223px;
     left: 0;
-    height: 90%;
+    height: 100%;
     font-weight: 100;
 }
 
 .box_img:hover .container_info {
     top: 0;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .card_vacation {

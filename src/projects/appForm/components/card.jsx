@@ -1,15 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Context from '../context/context';
 import './style.css'
 
 const Card = () => {
-    const { summary } = useContext(Context)
-    const [priceTotal, setPriceTotal] = useState();
-
-    const total = () => {
-        setPriceTotal((summary.price * summary.day) + (20 * summary.badrooms) + ( 30 * summary.people))
-    }
-
+    const { summary, priceTotal } = useContext(Context)
+    const priceBedrooms = 30
+    const pricePeople = 55;
     return (
         <div className='container_card'>
             <img className='img_summary' src={summary.src} alt='img' />
@@ -43,15 +39,15 @@ const Card = () => {
                     }
                     {
                         summary.bedrooms &&
-                        <>
+                        <>  
                             <hr></hr>
                             <article className='articule_text'>
-                                <p>bedrooms</p>
+                                <p>bedrooms (one bedrooms $30)</p>
                                 <p>{summary.bedrooms}</p>
                             </article>
                             <article className='articule_text'>
-                                <p>Nº of people</p>
-                                <p>{summary.people}</p>
+                                <p>Nº of people (one people $55)</p>
+                                <p>${summary.people}</p>
                             </article>
                             <article className='articule_text'>
                                 <p>Nº of day</p>
@@ -59,7 +55,7 @@ const Card = () => {
                             </article>
                         </>
                     }
-                    <h3>Valor:</h3>
+                    <h4>Price: ${priceTotal}</h4>
                 </div>
             </section>
 

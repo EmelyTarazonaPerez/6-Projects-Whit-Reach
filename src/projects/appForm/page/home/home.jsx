@@ -13,7 +13,7 @@ const Home = () => {
 
     const [bottonDisabled, setBottonDisabled] = useState(true);
 
-    const { stage, setStage, dispatch } = useContext(Context)
+    const { stage, setStage, dispatch, setPriceTotal, setKpiProgress, kpiProgress } = useContext(Context)
 
     const { register,
         handleSubmit,
@@ -27,6 +27,8 @@ const Home = () => {
         setBottonDisabled(false)
         const zoneCheck = zones.find(item => item.location === zone.valor)
         dispatch({ type: 'section_zone', payload: zoneCheck })
+        setPriceTotal(zoneCheck.price)
+        setKpiProgress(kpiProgress + 33.33)
         setStage(stage + 1)
         navigate('/form')
 
@@ -56,7 +58,7 @@ const Home = () => {
                                 </div>
                                 <div className='box_input'>
                                     <input type="radio" id='montain' name='vacation' onClick={handleChange} value={item.location} {...register('valor', { required: true })} />
-                                    <label htmlFor={item.location}>{item.location} ({item.price})</label>
+                                    <label htmlFor={item.location}>{item.location} (${item.price})</label>
                                     {errors.valor ? 'select one zone' : ''}
                                 </div>
                             </article>
@@ -64,7 +66,7 @@ const Home = () => {
                     }
                 </section>
                 <p>{questions[stage].text}</p>
-                <button type='submit' disabled={bottonDisabled === true} style={bottonDisabled !== true ? { backgroundColor: '#2146C8' } : { backgroundColor: '#3878D8' }}>
+                <button type='submit' disabled={bottonDisabled === true} style={bottonDisabled !== true ? { backgroundColor: '#2146C8' } : { backgroundColor: '#3878d8b5' }}>
                     <b>continue</b>
                     <FontAwesomeIcon icon={faArrowRight} />
                 </button>

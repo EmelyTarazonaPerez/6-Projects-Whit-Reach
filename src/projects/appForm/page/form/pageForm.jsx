@@ -3,28 +3,46 @@ import questions from '../../data/questions.json'
 import Context from '../../context/context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom'
 import './pageForm.css'
 import Card from '../../components/card';
 import { useForm } from 'react-hook-form';
-import { type } from '@testing-library/user-event/dist/type';
+import { useNavigate } from 'react-router-dom'
 
 const PageForm = () => {
-    const { stage, dispatch, setStage } = useContext(Context)
-    const navigate = useNavigate();
+    const {
+        stage,
+        dispatch,
+        setStage,
+        setPriceTotal,
+        priceTotal,
+        kpiProgress,
+        setKpiProgress } = useContext(Context)
 
-    const { register, handleSubmit, watch, formState: { errors }, setFocus, reset } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const navegate = useNavigate()
 
-    const sent = (valor) => {
-        dispatch({ type: 'information_client', payload: valor })
+    const sent = (data) => {
+        dispatch({ type: 'information_client', payload: data })
+        setKpiProgress(kpiProgress + 33.33)
+
+        if (data.days) calculatePrice(data)
         setStage(stage + 1)
     }
 
+    const calculatePrice = (data) => {
+        const priceBedrooms = 30
+        const pricePeople = 55;
+        setPriceTotal(priceTotal * data.days + (priceBedrooms * data.Bedrooms) + (pricePeople * data.people))
+    }
+
+    const printData = () => {
+        window.print()
+    }
     return (
         <div className='container_page'>
             <div className='container_progress'>
                 <div className="progress progress_persoonalized" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                    <div className="progress-bar w-75"></div>
+                    <div className="progress-bar" style={{ width: kpiProgress + '%' }}></div>
                 </div>
             </div>
             <section className='container_form'>
@@ -39,7 +57,9 @@ const PageForm = () => {
                                         <>
                                             <div className='group_question'>
                                                 <label>{item.question}*</label>
-                                                <input className='input_question' type={questions[stage].text === 'Enter personal information' ? 'text' : 'number'  } name={item.question} placeholder=' '
+                                                <input className='input_question'
+                                                    type={questions[stage].text === 'Enter personal information' ? 'text' : 'number'}
+                                                    name={item.question} placeholder=' '
                                                     {...register(item.question, {
                                                         required: item.required,
                                                         min: item.min,
@@ -56,7 +76,24 @@ const PageForm = () => {
                             }
                         </section>
                     </div>
-                    <button><b>continue</b><FontAwesomeIcon icon={faArrowRight} /> </button>
+
+                    <div className='container_bottons'>
+                        <button type='button' className='btn_back' onClick={() => {
+                            if (stage === 1) navegate('/home')
+                            setStage(stage - 1)
+                            setKpiProgress(kpiProgress - 33.33)
+                        }}>
+                            <b>back</b>
+                        </button>
+                        {stage !== 3
+                            ? <button><b>continue</b><FontAwesomeIcon icon={faArrowRight} /> </button>
+                            : <button onClick={printData}><b>imprimir</b><FontAwesomeIcon icon={faArrowRight} /> </button>
+                        }
+                    </div>
+
+
+
+
                 </form>
                 <Card />
             </section>
