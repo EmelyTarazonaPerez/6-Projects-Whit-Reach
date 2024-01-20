@@ -1,4 +1,4 @@
-# Six mini-project-react.
+# Six mini-project-react. 🤩
 
 En esta app se usan diversos projectos, para hacer uso de estos solo inserte el componente principal de cada projecto al App.js.
 
