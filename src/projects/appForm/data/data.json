@@ -1,0 +1,23 @@
+[
+    {
+        "location": "Montain",
+        "price": 30,
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Machu_Picchu%2C_Peru_%282018%29.jpg",
+        "name": "Machu Picchu",
+        "description" : "Machu Picchu is one of the 7 wonders of the modern world. What is known about this citadel is still being discovered."
+    },
+    {
+        "location": "Beach",
+        "price": 45,
+        "src": "https://viajes.nationalgeographic.com.es/medio/2017/04/24/belice_3eb66274.jpg",
+        "name": "Sarakiniko",
+        "description": "Sarakiniko Beach is a beach on Milos Island in the European country of Greece. It is located on the northern coast of the island. It is often compared to a lunar landscape"
+    },
+    {
+        "location": "Desert",
+        "price": 40,
+        "src": "https://images.memphistours.com/xlarge/61f0b17548b402e232b5e11f76a90332.jpg",
+        "name": "The Sahara",
+        "description": "The Sahara or Sahara is the largest hot desert in the world and the third largest after Antarctica and the Arctic. With more than 9,400,000 km² of surface"
+    }
+]
