@@ -1,7 +1,6 @@
 # Six mini-project-react. 🤩
 
-En esta app se usan diversos projectos, para hacer uso de estos solo inserte el componente principal de cada projecto al App.js.
-
+Various projects are used in this app, to use them just insert the main component of each project into App.js.
 ## Projects
 
 | #   link      | name                   | description |
