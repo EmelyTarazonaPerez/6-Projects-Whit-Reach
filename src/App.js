@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.css';
-import Index from './projects/appForm/index'
+import Index from './projects/gameMemory/index'
 
 function App() {
 
