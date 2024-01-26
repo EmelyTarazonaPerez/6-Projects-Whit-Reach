@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { datos } from './data/datos';
 import styled from 'styled-components'
-import ima from './data/imagen1.png'
 import './index.css'
 
 const Index = () => {
@@ -14,6 +13,7 @@ const Index = () => {
     }))
 
     const [images, setImages] = useState([]);
+    const [checkImg, setCheckImg] = useState([]);
 
     useEffect(() => {
         for (let i = objectImgPrevius.length - 1; i > 0; i--) {
@@ -21,20 +21,55 @@ const Index = () => {
             [objectImgPrevius[i], objectImgPrevius[azar]] = [objectImgPrevius[azar], objectImgPrevius[i]]
         }
         setImages(objectImgPrevius)
-        console.log(images)
     }, [])
 
+    const mostrar = (e) => {
+        setCheckImg([...checkImg, {
+            img: images[e].img,
+            index: e
+        }])
+        const prevItem = [...images]
+        prevItem[e].estado = 1;
+        setImages(prevItem)
+    }
+
+    useEffect(() => {
+        if (checkImg.length === 2) {
+            if (checkImg[0].img === checkImg[1].img) {
+                setCheckImg([])
+            }
+            else {
+                setTimeout(() => {
+                    checkImg.map(item => {
+                        const provisional = [...images]
+                        provisional[item.index].estado = 0
+                        setImages(provisional)
+                        setCheckImg([])
+                    })
+                }, 2000)
+            }
+        }
+    }, [checkImg])
+
     return (
-        <div>
-            <h1>Game memory</h1>
+        <div className='container_game'>
+            <h1 className='tittle_game'>Game memory</h1>
             <div className='container_grid'>
                 <ContainerGrif>
-                    {images.map((imagen, index) => (
-                        <div key={index}>
-                            {/*<img src={imagen.img} alt='imagen'/>*/}
-                            <ImgStyle></ImgStyle>
-                        </div>
-                    ))}
+                    {images.map((imagen, index) =>
+                        imagen.estado === 0
+                            ? (
+                                <div onClick={() => mostrar(index)} key={index}>
+                                    {/*<img src={imagen.img} alt='imagen'/>*/}
+                                    <ImgStyle></ImgStyle>
+                                </div>
+                            )
+                            : (
+                                <div onClick={() => mostrar(index)} key={index}>
+                                    <img src={imagen.img} alt='imagen' />
+                                </div>
+                            )
+                    )}
                 </ContainerGrif>
             </div>
         </div>
@@ -46,7 +81,8 @@ const ImgStyle = styled.div`
     width: 135px;
     height: 154px;
     border-radius: 5px;
-    background-color: rgb(163, 92, 0);
+    background-color: #CDDC39;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `
 
 const ContainerGrif = styled.div`
