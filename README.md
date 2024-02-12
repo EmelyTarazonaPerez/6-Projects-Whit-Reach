@@ -13,7 +13,7 @@ Various projects are used in this app, to use them just insert the main componen
 | 6             | Currency converter  |
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/6        | app multi-routing  | In this project, I create a page with private routing and public routing. To do this, I use the context to alert when a user logs in, then I create two components (private routing and public routing) which check the user's status, to give permission to certain content. More info here  https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/6    
 |https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/7       | app form  | In this application I create a page with several forms used react-hook-form  https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/7
-
+|https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/8 | app game memory | Memory game or Memorama is a board game with a deck of specific cards. The objective is to find pairs with the same printed figure using memory |
 ## Ejemplos de projectos .
 1. Dinner with the kings
 ![image](https://github.com/EmelyTarazonaPerez/mini-project-react/assets/122141594/4211599c-852d-4f4b-b8f7-200b87fde407)
