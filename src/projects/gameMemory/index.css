@@ -1,0 +1,37 @@
+.imagen_hidden {
+    width: 100px;
+    height: 100px;
+    background-color: #CDDC39;
+}
+
+img {
+    border-radius: 13px;
+}
+
+.container_grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container_game {
+    height: 100vh;
+    
+    margin: 0px;
+    background-color: #673ab7;
+}
+
+.tittle_game {
+    text-align: center;
+    padding: 40px;
+    font-weight: 800;
+    font-family: Poppins;
+    color: white;
+}
+
+
+.container_rigth_guess {
+    text-align: center;
+    margin-top: 18px;
+}
