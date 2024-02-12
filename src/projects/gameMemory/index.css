@@ -29,3 +29,9 @@ img {
     font-family: Poppins;
     color: white;
 }
+
+
+.container_rigth_guess {
+    text-align: center;
+    margin-top: 18px;
+}

@@ -1,85 +1,85 @@
 import React, { useState } from 'react'
-import MisReyes from './kings'
+import MyKings from './kings'
 
 function HomeReyes() {
-    const reyes = [
+    const kings = [
         {
-            nombre: "Atanagildo",
+            name: "Atanagildo",
             color: "darkolivegreen",
-            precio: 178
+            price: 178
         }, {
-            nombre: "Ervigio",
+            name: "Ervigio",
             color: "crimson",
-            precio: 169
+            price: 169
         }, {
-            nombre: "Ataúlfo",
+            name: "Ataúlfo",
             color: "peru",
-            precio: 81
+            price: 81
         }, {
-            nombre: "Leogivildo",
+            name: "Leogivildo",
             color: "darkmagenta",
-            precio: 126
+            price: 126
         }, {
-            nombre: "Recesvinto",
+            name: "Recesvinto",
             color: "royalblue",
-            precio: 141
+            price: 141
         }, {
-            nombre: "Sisebuto",
+            name: "Sisebuto",
             color: "teal",
-            precio: 69
+            price: 69
         }
     ]
 
-    const [precio, setPrecio] = useState(0);
+    const [price, setPrice] = useState(0);
 
     return (
         <>
-        <h1>Total a pagar: {precio} €</h1>
+        <h1>Total to pay: {price} €</h1>
             <div className='page'>
                 <div className='container'>
                     <div className='wrapper'>
-                        <MisReyes
-                            nombre={reyes[0].nombre}
-                            color={reyes[0].color}
-                            precio={reyes[0].precio}
+                        <MyKings
+                            name={kings[0].name}
+                            color={kings[0].color}
+                            price={kings[0].price}
                             img={'https://www.html6.es/img/rey_atanagildo.png'}
-                            setPrecio={setPrecio}>
-                        </MisReyes>
-                        <MisReyes
-                            nombre={reyes[1].nombre}
-                            color={reyes[1].color}
-                            precio={reyes[1].precio}
-                            setPrecio={setPrecio}
+                            setPrice={setPrice}>
+                        </MyKings>
+                        <MyKings
+                            name={kings[1].name}
+                            color={kings[1].color}
+                            price={kings[1].price}
+                            setPrice={setPrice}
                             img={'https://www.html6.es/img/rey_ervigio.png'}>
-                        </MisReyes>
-                        <MisReyes
-                            nombre={reyes[2].nombre}
-                            color={reyes[2].color}
-                            precio={reyes[2].precio}
-                            setPrecio={setPrecio}
+                        </MyKings>
+                        <MyKings
+                            name={kings[2].name}
+                            color={kings[2].color}
+                            price={kings[2].price}
+                            setPrice={setPrice}
                             img={'https://www.html6.es/img/rey_ataúlfo.png'}>
-                        </MisReyes>
-                        <MisReyes
-                            nombre={reyes[3].nombre}
-                            color={reyes[3].color}
-                            precio={reyes[3].precio}
-                            setPrecio={setPrecio}
+                        </MyKings>
+                        <MyKings
+                            name={kings[3].name}
+                            color={kings[3].color}
+                            price={kings[3].price}
+                            setPrice={setPrice}
                             img={'https://www.html6.es/img/rey_atanagildo.png'}>
-                        </MisReyes>
-                        <MisReyes
-                            nombre={reyes[4].nombre}
-                            color={reyes[4].color}
-                            precio={reyes[4].precio}
-                            setPrecio={setPrecio}
+                        </MyKings>
+                        <MyKings
+                            name={kings[4].name}
+                            color={kings[4].color}
+                            price={kings[4].price}
+                            setPrice={setPrice}
                             img={'https://www.html6.es/img/rey_leogivildo.png'}>
-                        </MisReyes>
-                        <MisReyes
-                            nombre={reyes[5].nombre}
-                            color={reyes[5].color}
-                            precio={reyes[5].precio}
-                            setPrecio={setPrecio}
+                        </MyKings>
+                        <MyKings
+                            name={kings[5].name}
+                            color={kings[5].color}
+                            price={kings[5].price}
+                            setPrice={setPrice}
                             img={'https://www.html6.es/img/rey_recesvinto.png'}>
-                        </MisReyes>
+                        </MyKings>
                     </div>
                 </div>
             </div>

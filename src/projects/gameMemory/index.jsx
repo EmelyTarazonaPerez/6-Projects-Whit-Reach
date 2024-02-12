@@ -14,13 +14,17 @@ const Index = () => {
 
     const [images, setImages] = useState([]);
     const [checkImg, setCheckImg] = useState([]);
+    const [rightGuess, setRightGuess] = useState(0);
 
+
+    //first render
     useEffect(() => {
         for (let i = objectImgPrevius.length - 1; i > 0; i--) {
             const azar = Math.floor(Math.random() * (i + 1));
             [objectImgPrevius[i], objectImgPrevius[azar]] = [objectImgPrevius[azar], objectImgPrevius[i]]
         }
         setImages(objectImgPrevius)
+        setRightGuess(0)
     }, [])
 
     const mostrar = (e) => {
@@ -35,8 +39,10 @@ const Index = () => {
 
     useEffect(() => {
         if (checkImg.length === 2) {
+            //same images
             if (checkImg[0].img === checkImg[1].img) {
                 setCheckImg([])
+                setRightGuess((e) => e + 1)
             }
             else {
                 setTimeout(() => {
@@ -71,6 +77,10 @@ const Index = () => {
                             )
                     )}
                 </ContainerGrif>
+            </div>
+            <div className='container_rigth_guess'>
+                <b>Right Guess</b>
+                <p>{rightGuess}</p>
             </div>
         </div>
 
