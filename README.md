@@ -5,7 +5,7 @@ Various projects are used in this app, to use them just insert the main componen
 
 | #   link      | name                   | description |
 | ------------- | ---------------------- | ------------|
-| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/1 | app jocker              |  Mini project where an open API provides random wildcards. |
+| https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/1 | app jocker              |  Mini project where an open API provides random wildcards|
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/4 | Project routing king    | In this project, the entire routing system was used |
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/3 | project select teachers | The application shows a card with different languages: English, Spanish and German, represented in buttons, which through an onClick change the value of the global state of the app and update the view of the component|
 | https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/5 | project admin articule  | In this project, the useReducer state manager was used to manage the actions and changes that the variable must take for each user interaction. More info here  https://github.com/EmelyTarazonaPerez/6-Projects-Whit-Reach/pull/5 |
