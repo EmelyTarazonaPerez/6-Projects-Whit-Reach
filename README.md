@@ -1,7 +1,7 @@
 # Six mini-project-react. 🤩
 
 Various projects are used in this app, to use them just insert the main component of each project into App.js.
-## Projects
+## Projects.
 
 | #   link      | name                   | description |
 | ------------- | ---------------------- | ------------|
